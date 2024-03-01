@@ -1,13 +1,53 @@
-header, footer {
+/* App.css */
+
+/* Style for the entire app */
+.App {
   text-align: center;
-  padding: 20px;
-  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
 }
 
-h1, h2 {
-  margin: 0;
-}
-
-button {
+/* Style for each section (Guide and Quiz) */
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* Adjust height as needed */
   margin: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Style for the Guide component */
+.guide {
+  background-color: #f0f0f0;
+}
+
+/* Style for the Quiz component */
+.quiz {
+  background-color: #e0e0e0;
+}
+
+/* Style for quiz questions and answers */
+.question-section, .answer-section {
+  margin-bottom: 20px;
+}
+
+.question-text {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.answer-section button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.answer-section button:hover {
+  background-color: #0056b3;
 }

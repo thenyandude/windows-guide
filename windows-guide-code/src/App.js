@@ -1,16 +1,14 @@
 import React from 'react';
-import Quiz from './Quiz';
-import Guide from './Guide';
-import Header from './Header';
-import Footer from './Footer';
+import Guide from './components/Guide';
+import Quiz from './components/Quiz';
+import './App.css';
+
 
 function App() {
   return (
-    <div>
-      <Header />
+    <div className="App">
       <Guide />
       <Quiz />
-      <Footer />
     </div>
   );
 }
