@@ -1,0 +1,13 @@
+header, footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+button {
+  margin: 10px;
+}
