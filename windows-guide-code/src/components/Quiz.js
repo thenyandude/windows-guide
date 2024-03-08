@@ -5,12 +5,28 @@ const Quiz = () => {
   const [score, setScore] = useState(0);
   const [quizFinished, setQuizFinished] = useState(false);
 
+  const resetQuiz = () => {
+    setCurrentQuestion(0);
+    setScore(0);
+    setQuizFinished(false);
+  };
+
+
   const questions = [
     {
       questionText: 'Hva er DNS',
       answerOptions: [
-        { answerText: 'Domain Name Service', isCorrect: false },
+        { answerText: 'Dynamic Name Service', isCorrect: false },
         { answerText: 'Domain Name Server', isCorrect: true },
+        // more answers...
+      ],
+    },
+
+    {
+      questionText: 'Er Nyan kul?',
+      answerOptions: [
+        { answerText: 'JA!', isCorrect: true },
+        { answerText: 'NEI??', isCorrect: false },
         // more answers...
       ],
     },
@@ -49,8 +65,10 @@ const Quiz = () => {
         <div>
           <h1>Quiz Completed!</h1>
           <p>Your score: {score} out of {questions.length}</p>
-          {/* Optionally, add a button to restart the quiz */}
-        </div>
+          
+          {quizFinished && (
+            <button onClick={resetQuiz}>Retry Quiz</button>
+          )}        </div>
       )}
     </div>
   );

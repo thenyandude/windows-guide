@@ -9,12 +9,14 @@
 /* Style for each section (Guide and Quiz) */
 .section {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-start; /* Align content to the top */
   align-items: center;
-  height: 50vh; /* Adjust height as needed */
+  min-height: 50vh; /* Allow the section to grow with the content */
   margin: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: auto; /* Add scrolling if content overflows */
 }
 
 /* Style for the Guide component */
@@ -49,5 +51,30 @@
 }
 
 .answer-section button:hover {
+  background-color: #0056b3;
+}
+
+.guide-image-container img {
+  width: 50%; /* Or any other width */
+  height: auto;
+  margin-bottom: 100px; /* Adds space between the images */
+}
+
+
+.scroll-to-quiz {
+  padding: 10px 20px;
+  margin-top: 20px; /* Adjust as needed */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: fixed; /* Fixed at the top */
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+}
+
+.scroll-to-quiz:hover {
   background-color: #0056b3;
 }
